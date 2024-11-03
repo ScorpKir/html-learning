@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Изображения</title>
+    <h1>Изображения</h1>
+  </head>
+  <body>
+    <p>
+      Для добавления изображения используется тег <code>&lt;img&gt;</code>. Это
+      одинарный тег. Вот его основные атрибуты:
+    </p>
+
+    <ul>
+      <li><code>src</code> - ссылка на картинку</li>
+      <li>
+        <code>alt</code> - текст, который отображается вместо картинки, если она
+        не загрузилась
+      </li>
+      <li>
+        <code>title</code> - текст, который отображается при наведении мыши на
+        картинку
+      </li>
+      <li><code>width</code> - ширина картинки в пикселях</li>
+      <li><code>height</code> - высота картинки в пикселях</li>
+    </ul>
+
+    <b>Пример:</b>
+    <pre>
+        <xmp>
+            <img
+             src="http://example.com/cat.jpg"
+             title="Мурка"
+             alt="Рыжая кошка валяется в снегу"
+             width="640"
+             height="480"
+            >
+        </xmp>
+    </pre>
+
+    <h2>Семантичные изображения с подписью в HTML 5</h2>
+
+    <p>
+      В HTML 5 появились теги для оформления объектов с подписями - figure и
+      figcaption. Если твоей картинке нужна подпись - пользуйся ими. Пример
+      кода:
+    </p>
+    <pre>
+        <xmp>
+            <figure>
+                <img src="https://www.google.ru/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png">
+                <figcaption>
+                    Лого гугла от 2015 года
+                </figcaption>
+            </figure>
+        </xmp>
+    </pre>
+    <figure>
+      <img
+        src="https://www.google.ru/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
+      />
+      <figcaption>Лого гугла от 2015 года</figcaption>
+    </figure>
+  </body>
+</html>
