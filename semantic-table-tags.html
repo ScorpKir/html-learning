@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Семантические теги таблиц</title>
+    <h1>Семантические теги таблиц</h1>
+  </head>
+  <body>
+    <p>
+      Существует возможность группировать строки таблицы тегами
+      <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code>,
+      <code>&lt;tbody&gt;</code>. Они не являются обязательными, но их
+      рекомендуется использовать. Они дают частям таблицы семантический смысл.
+    </p>
+
+    <p>
+      <code>&lt;thead&gt;</code> - для заголовка, <br />
+      <code>&lt;tfoot&gt;</code> - нижний колонтитул таблицы, <br />
+      <code>&lt;tbody&gt;</code> - основной контент таблицы <br />
+    </p>
+
+    <p>
+      Интересный факт: <code>&lt;tfoot&gt;</code> в коде можно расположить перед
+      <code>&lt;tbody&gt;</code> или после него, но браузеры всегда выводят его
+      в конце таблицы.
+    </p>
+
+    <p>
+      <code>&lt;thead&gt;</code> и <code>&lt;tfoot&gt;</code> можно использовать
+      только по одному разу в одной таблице, а количество
+      <code>&lt;tbody&gt;</code> может быть любым. С помощью нескольких
+      <code>&lt;tbody&gt;</code> можно разделить контент таблицы на смысловые
+      части. Например, так в таблице могут быть представлены данные за несколько
+      лет, и каждый год будет вынесен в отдельный <code>&lt;tbody&gt;</code>.
+    </p>
+
+    <p>
+      Название таблицы можно разместить в теге <code>&lt;caption&gt;</code>.
+      Этот тег располагают внутри тега <code>&lt;table&gt;</code> в самом
+      начале, перед тегами <code>&lt;thead&gt;</code>,
+      <code>&lt;tfoot&gt;</code>, <code>&lt;tbody&gt;</code>.
+    </p>
+
+    <h2>Пример использования тегов</h2>
+
+    <pre>
+        <xmp>
+            <table border="1">
+              <caption>Сотрудники отдела поддержки</caption>
+              <thead>
+                <tr>
+                <th>Имя</th>
+                <th>Должность</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <td>Петя</td>
+                <td>Менеджер</td>
+                </tr>
+                <tr>
+                <td>Маша</td>
+                <td>Разработчик</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                <td>Вася</td>
+                <td>Девопс</td>
+                </tr>
+              </tfoot>
+            </table>
+        </xmp>
+    </pre>
+
+    <h2>Результат</h2>
+
+    <table border="1">
+      <caption>
+        Сотрудники отдела поддержки
+      </caption>
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Должность</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Петя</td>
+          <td>Менеджер</td>
+        </tr>
+        <tr>
+          <td>Маша</td>
+          <td>Разработчик</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Вася</td>
+          <td>Девопс</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
