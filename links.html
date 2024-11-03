@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ссылки и адреса</title>
+    <h1>Ссылки и адреса</h1>
+  </head>
+  <body>
+    <p>
+      Для создания ссылки необходимо использовать тег <code>&lt;a&gt;</code>.
+      Атрибут <code>href</code> указывает адрес, по которому будет совершён
+      переход.
+    </p>
+    <p>Адреса бывают двух видов:</p>
+
+    <h2>Абсолютные адреса</h2>
+    <p>Абсолютный адрес, записанный в полной форме. Например,</p>
+    <code>https://google.com/doodles</code>
+    <p>Разберём этот адрес:</p>
+    <ul>
+      <li>
+        <code>https</code> - так называемая «схема», обычно это название
+        протокола. HTTPS - защищённая версия HTTP.
+      </li>
+      <li><code>google.com</code> - доменное имя сайта</li>
+      <li><code>/doodles</code> - путь (директория) внутри сайта</li>
+    </ul>
+    <p>Ещё пример:</p>
+    <code>file:///C:/Users/admin/Desktop/Новая%20папка/image.jpg</code>
+    <ul>
+      <li>
+        <code>file</code> - схема URI, предназначенная для того, чтобы
+        адресовать файлы на локальном компьютере или в локальной сети (<a
+          href="https://ru.wikipedia.org/wiki/File_(%D1%81%D1%85%D0%B5%D0%BC%D0%B0_URI)"
+          >подробнее на Википедии</a
+        >)
+      </li>
+      <li>
+        <code>/C:/Users/admin/Desktop/Новая%20папка/image.jpg</code> - путь до
+        файла. %20 - код пробела в
+        <a
+          href="https://ru.wikipedia.org/wiki/URL#%D0%9A%D0%BE%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_URL"
+          >URI-кодировании</a
+        >.
+      </li>
+    </ul>
+
+    <h2>Отосительные адреса</h2>
+    <p>
+      Относительный - сокращённый адрес. В таком адресе начальная часть опущена
+      и браузер использует текущий адрес для определения полного адреса.
+      Примеры:
+    </p>
+    <ul>
+      <li>
+        <code>//google.com</code> - ссылка на домен в текущем протоколе: если мы
+        находимся по адресу, который начинается с http, то ссылка будет вести на
+        <a href="http://google.com">http://google.com</a>
+      </li>
+      <li>
+        <code>/sheets</code> - ссылка на путь внутри текущего домена: если мы
+        находимся на <a href="http://google.com">http://google.com</a>, то
+        ссылка будет вести на
+        <a href="http://google.com/sheets">http://google.com/sheets</a>, а если
+        на <a href="http://facebook.com">http://facebook.com</a>, то на
+        <a href="http://facebook.com/sheets">http://facebook.com/sheets</a>.
+      </li>
+      <li>
+        <code>page2</code> - ссылка на путь внутри текущей директории: если мы
+        находимся на
+        <a href="http://site.com/routes/page1">http://site.com/routes/page1</a>,
+        то попадём на
+        <a href="http://site.com/routes/page2">http://site.com/routes/page2</a>
+      </li>
+    </ul>
+    <h3>Пример использования относительного адреса</h3>
+    <p>Файловая система:</p>
+    <pre>
+        <code>
+            Новая папка
+            ├───img
+            │   ├───kisa.jpg
+            │   └───kot.png
+            ├───index.html
+            └───style.css
+        </code>
+    </pre>
+    <p>Код в index.html:</p>
+    <pre>
+        <xmp>
+            ...
+            <link rel="stylesheet" href="style.css">
+            ...
+            <img src="img/kisa.jpg">
+            <img src="img/kot.png">
+        </xmp>
+    </pre>
+  </body>
+</html>
