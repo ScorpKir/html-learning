@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Формы</title>
+    <h1>Формы</h1>
+  </head>
+  <body>
+    <img
+      src="https://ucarecdn.com/bd528496-df5d-4c33-b077-abb900dc65d4/"
+      alt="Bext UI practice"
+    />
+
+    <h2>Создание формы</h2>
+
+    <p>
+      Элемент формы создаётся парным тегом <code>&lt;form&gt;</code>. Внутри
+      размещаются сами поля, причем те, что расположены за пределами элемента,
+      отправлены не будут. При необходимости в элементе формы можно использовать
+      стороннюю разметку. Тип отображения по умолчанию block (блочный элемент).
+      Данный тег имеет два обязательных атрибута: <code>action</code> и
+      <code>method</code>.
+    </p>
+
+    <p>
+      В атрибуте <code>action</code> указывается ссылка на обработчик формы.
+      Обработчиком формы является файл, который будет обрабатывать данные этой
+      формы.
+    </p>
+
+    <p>
+      Атрибут <code>method</code> предназначен для указания метода отправки
+      данных на сервер (GET или POST).
+    </p>
+
+    <h2><code>&lt;input&gt;</code></h2>
+
+    <p>
+      Поле задается одинарным тегом <code>&lt;input /&gt;</code>. Данный тег
+      стилизуется браузерами по-разному. Тип отображения по умолчанию inline
+      (встроенный элемент), поэтому все поля отображаются в одной строке. Эта
+      проблема решается подключением стилей, а пока мы до них не дошли -
+      используй тег <code>&lt;br&gt;</code>.
+    </p>
+
+    <h2>Типы полей форм</h2>
+
+    <p>
+      От пользователя нам могут понадобиться самые разные данные. Для удобства
+      их сбора появились типы полей форм. Они задаются через атрибут
+      <strong>type</strong>. Вот основные:
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          Текстовое поле. Все просто: в атрибуте пишем <strong>text</strong>.
+        </p>
+        <p><code>&lt;input type="text" /&gt;</code> <br /></p>
+        <p><input type="text" /></p>
+      </li>
+      <li>
+        <p>Ввод пароля. Указывается значение <strong>password</strong>.</p>
+        <p><code>&lt;input type="password" /&gt;</code> <br /></p>
+        <p><input type="password" /></p>
+      </li>
+      <li>
+        <p>
+          Флаги (чекбоксы). Они используются для выбора нескольких вариантов
+          ответа и обозначаются в атрибуте как <strong>checkbox</strong>.
+          Подпись к галочке нужно писать отдельно.
+        </p>
+        <p><code>&lt;input type="checkbox" /&gt;</code> <br /></p>
+        <p><input type="checkbox" /></p>
+      </li>
+      <li>
+        <p>
+          Радио-кнопки. Это выбор одного из нескольких вариантов. Для создания в
+          атрибуте прописываем <strong>radio</strong>. Переключатели между собой
+          нужно связывать: пишем атрибут <strong>name</strong> с одинаковыми
+          значениями. Также необходим атрибут <strong>value</strong>.
+        </p>
+        <p>
+          <code
+            >&lt;input type="radio" name="gender" value="male" checked&gt;
+            Мужской<br />
+            &lt;input type="radio" name="gender" value="female"&gt; Женский<br />
+            &lt;input type="radio" name="gender" value="other"&gt; Другой</code
+          >
+          <br />
+        </p>
+        <p>
+          <input type="radio" name="gender" value="male" checked />
+          Мужской<br />
+          <input type="radio" name="gender" value="female" /> Женский<br />
+          <input type="radio" name="gender" value="other" /> Другой
+        </p>
+      </li>
+    </ul>
+
+    <p>Эти типы создают кнопки</p>
+
+    <ul>
+      <li>
+        <p>
+          Загрузка файлов. При значении атрибута
+          <strong>file</strong> появляется кнопка загрузки.
+        </p>
+        <p><code>&lt;input type="file" /&gt;</code> <br /></p>
+        <p><input type="file" /></p>
+      </li>
+      <li>
+        <p>
+          Сброс всех значений. Для создания такой кнопки пишем
+          <strong>reset</strong>. Чтобы все сработало, кнопка должна находиться
+          внутри формы, в которой нужно сбросить значения.
+        </p>
+        <p><code>&lt;input type="reset" /&gt;</code> <br /></p>
+        <p><input type="reset" /></p>
+      </li>
+      <li>
+        <p>
+          Отправка. Любая форма бессмысленна, если не отправляется на сервер.
+          Значение для такой кнопки: <strong>submit</strong>.
+        </p>
+        <p><code>&lt;input type="submit" /&gt;</code> <br /></p>
+        <p><input type="submit" /></p>
+      </li>
+      <li>
+        <p>
+          Просто кнопка. Чтобы создать кнопку без определенного действия
+          указываем button.
+        </p>
+        <p>
+          <code>&lt;button&gt;Нажми на меня!&lt;/button&gt;</code>
+        </p>
+        <p>
+          <button>Нажми на меня!</button>
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      Создадим раскрывающийся список. Это тег <code>&lt;select&gt;</code>. У
+      него есть несколько атрибутов: <strong>name</strong>,
+      <strong>size</strong>, <strong>multiple</strong>.
+    </p>
+    <p>
+      Атрибут <strong>name</strong>, работает как у переключателей.
+      <strong>size</strong> отвечает за то, сколько строк списка будет
+      одновременно отображено. В качестве значения туда пишется целое
+      положительное число. Атрибут <strong>multiple</strong> отвечает за то,
+      можно ли выбрать сразу несколько вариантов из списка (как checkbox); это
+      атрибут без значения.
+    </p>
+    <p>
+      Каждый элемент списка выделяется в тег
+      <code>&lt;option&gt;</code>
+      . Так же, как и с <code>&lt;input type="checkbox" /&gt;</code> и
+      <code>&lt;input type="radio" /&gt;</code> нужно указывать атрибут
+      <strong>value</strong>
+      со значением, которое будет отправлено на сервер.
+    </p>
+    <select name="Выбор" id="selection">
+      <option value="1">Пункт1</option>
+      <option value="2">Пункт2</option>
+      <option value="3">Пункт3</option>
+      <option value="4">Пункт4</option>
+    </select>
+
+    <h2>Новые типы полей</h2>
+
+    <p>
+      С появлением стандарта HTML5 добавились и новые типы полей форм. В первую
+      очередь они стали гораздо удобнее для пользователей.
+    </p>
+
+    <ul>
+      <li>
+        <b>Ввод E-Mail</b>, <code>type="email"</code>. Текстовое поле, у
+        которого на клавиатуре мобильных устройств появляется символ @.
+      </li>
+      <li>
+        <b>Номер телефона</b>, <code>type="tel"</code>. На мобильных устройствах
+        открывается клавиатура с числами.
+      </li>
+      <li><b>Ввод ссылки</b>, <code>type="url"</code>.</li>
+      <li>
+        <b>Числовое поле</b>, <code>type="number"</code>. Помимо клавиатуры с
+        цифрами появляется возможность переключать значения поля. Атрибуты
+        <strong>min</strong> и <strong>max</strong> определяют нижнее и верхнее
+        возможное значение, <strong>step</strong> - шаг изменения, a
+        <strong>value</strong> - начальное значение.
+      </li>
+      <li>
+        <b>Числовой ползунок</b>, <code>type="range"</code>. Появляются уже
+        указанные атрибуты min, max, step и value.
+      </li>
+      <li>
+        <b>Поиск</b>, <code>type="search"</code>. Google Chrome добавляет
+        крестик для очистки введенной строки. На мобильных устройствах
+        появляется кнопка поиска.
+      </li>
+    </ul>
+  </body>
+</html>
