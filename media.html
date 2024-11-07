@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Медиаконтент</title>
+    <h1>Медиаконтент</h1>
+  </head>
+  <body>
+    <p>В понятие "медиаконтент" входит:</p>
+
+    <ul>
+      <li>Аудио</li>
+      <li>Видео</li>
+      <li>Картинки</li>
+      <li>Фреймы</li>
+    </ul>
+
+    <h2>Видео</h2>
+
+    <p>Тег <code>&lt;video&gt;</code> отображает видеоплеер на странице.</p>
+    <p>
+      Можно добавить элементы управления плеером видео с помощью атрибута
+      <code>controls</code>.
+    </p>
+    <p>
+      Задать автовоспроизведение видео при загрузке страницы можно с помощью
+      атрибута <code>autoplay</code>.
+    </p>
+    <p>
+      Автовоспроизведение во многих браузерах работает только совместно с
+      атрибутом <code>muted</code>, который ставит видео в беззвучный режим.
+    </p>
+    <p>
+      Чтобы видео начинало воспроизведение заново после его завершения нужно
+      задать тегу <code>&lt;video&gt;</code> атрибут <code>loop</code>
+    </p>
+    <p>
+      Атрибут <code>poster</code> задаёт изображение как превью для видео. Без
+      этого атрибута в качестве превью у видео будет первый кадр.
+    </p>
+
+    <h3>Пример:</h3>
+    <pre>
+        <xmp>
+            <video width="500" height="300" poster="/images/ass-penetration.jpg" controls>
+                <source src="/videos/6548176-hd_1920_1080_24fps.mp4" />
+            </video>
+        </xmp>
+    </pre>
+
+    <h3>Результат:</h3>
+    <video
+      width="500"
+      height="300"
+      poster="/images/ass-penetration.jpg"
+      controls
+    >
+      <source src="/videos/6548176-hd_1920_1080_24fps.mp4" />
+    </video>
+
+    <h2>Аудио</h2>
+    <p>Тег <code>&lt;audio&gt;</code> отображает видеоплеер на странице.</p>
+    <p>Атрибуты все такие-же как и у видеоплеера.</p>
+
+    <h3>Пример</h3>
+    <pre>
+        <xmp>
+            <audio controls>
+                <source src="/audio/salam-alekum.mp3.mp3" />
+            </audio>
+        </xmp>
+    </pre>
+
+    <h3>Результат</h3>
+    <audio controls>
+      <source src="/audio/salam-alekum.mp3.mp3" />
+    </audio>
+
+    <h2>Фреймы</h2>
+    <p>
+      Тег
+      <code>&lt;iframe&gt;</code> отображает виджет на странице. Может
+      использоваться для отображения виджетов с погодой, карт и тд.
+    </p>
+
+    <h3>Пример</h3>
+    <pre>
+        <xmp>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A65c8383aa944e7309ececed86f938ff496e70866a6a44215d87052b39a9ec002&amp;source=constructor"
+              width="500"
+              height="400"
+            >
+            </iframe>
+        </xmp>
+    </pre>
+
+    <h3>Результат</h3>
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3A65c8383aa944e7309ececed86f938ff496e70866a6a44215d87052b39a9ec002&amp;source=constructor"
+      width="500"
+      height="400"
+    >
+    </iframe>
+  </body>
+</html>
